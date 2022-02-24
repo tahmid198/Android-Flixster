@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     // 1. Define a data model class as a data source - DONE this is our movie class
     // 2. Add a RecyclerView to the layout - DONE
     // 3. Create a custom row layout xml file to visualize the item - DONE
-    // 4. Create an adapter and viewholder to render the item - DONE
+    // 4. Create an adapter and view holder to render the item - DONE
     // 5. Bind the adapter to the data source to populate the recycler view - DONE
     // 6. Bind a layout manger to the recycler view - DONE
 
