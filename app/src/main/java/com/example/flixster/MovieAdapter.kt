@@ -2,6 +2,7 @@ package com.example.flixster
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -45,7 +46,13 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         fun bind(movie: Movie) {
             textViewTitle.text = movie.title
             textViewOverview.text = movie.overview
-            Glide.with(context).load(movie.posterImageUrl).into(imageViewPoster)
+
+
+            Glide.with(context)
+                .load(movie.posterImageUrl)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .override(600, 600) // allows us to keep orig image size, without placeholder movie image size
+                .into(imageViewPoster)
         }
 
         override fun onClick(v: View?) {
